@@ -17,8 +17,8 @@ bar_chart = alt.Chart(data).mark_bar().encode(
 )
 
 def app():
-    st.title('Bar Chart with Positive Negative Reviews')
-    st.write('This app creates a bar chart with positive negative reviews')
+    st.title('Bar Chart with Two Entities')
+    st.write('This app creates a bar chart with two entities')
     st.altair_chart(bar_chart, use_container_width=True)
 
 if __name__ == '__main__':
