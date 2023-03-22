@@ -13,7 +13,7 @@ data = pd.DataFrame({
 
 # Create bar chart using Altair
 bar_chart = alt.Chart(data).mark_bar().encode(
-    x='entity',
+    x='label',
     y='value'
 ).properties(
     width=alt.Step(80)
