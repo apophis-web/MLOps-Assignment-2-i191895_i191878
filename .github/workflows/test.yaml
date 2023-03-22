@@ -1,0 +1,33 @@
+name: Install Requirements & Code Formatting
+
+on:
+  push:
+    branches:
+      - main
+      - hassan
+      - arsal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install Requirements
+      run: pip install -r requirements.txt
+      
+    - name: Install dependencies
+      run: pip install black
+
+    - name: Install pylint
+      run: pip install pylint
+
+    - name: Run Pylint
+      run: pylint --disable=all $(git ls-files '*.py')
+
+    - name: Run Black
+      run: black .
