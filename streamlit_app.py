@@ -2,16 +2,18 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+# Set page title
 st.set_page_config(page_title='Bar Chart with Two Entities')
 
 # Define data
 data = pd.DataFrame({
-    'entity': ['positive', 'negative'],
+    'entity': ['Entity 1', 'Entity 2'],
     'value': [10, 20]
 })
 
+# Create bar chart using Altair
 bar_chart = alt.Chart(data).mark_bar().encode(
-    x='label',
+    x='entity',
     y='value'
 ).properties(
     width=alt.Step(80)
