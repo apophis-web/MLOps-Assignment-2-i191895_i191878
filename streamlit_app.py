@@ -7,7 +7,7 @@ st.set_page_config(page_title='Bar Chart with Two Entities')
 
 # Define data
 data = pd.DataFrame({
-    'entity': ['Entity 1', 'Entity 2'],
+    'entity': ['Positive', 'Negative'],
     'value': [10, 20]
 })
 
