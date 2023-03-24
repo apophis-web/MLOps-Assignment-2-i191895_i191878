@@ -3,7 +3,7 @@ import requests
 import streamlit as st
 import altair as alt
 
-with open("C:\\Users\\Hassa\\OneDrive\\Desktop\\docker_mlops\\data.txt", "r", encoding = "utf-8") as f:
+with open("data.txt", "r", encoding = "utf-8") as f:
     sentences = f.read().splitlines()
 
 url = 'http://localhost:5000/sentiment'
